@@ -44,7 +44,7 @@ public:
     void clear(); // clear list
     void set(size_t, int); // change "size_t" item to "int"
     bool isEmpty(); // test for emptiness
-    void push_back(dualList); // add another list to end
+    bool list_in_list(dualList*, dualList*); // chek if first list contains second list
     ~dualList()
     {
         while (head->next != NULL) //while we can go next
