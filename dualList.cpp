@@ -1,6 +1,29 @@
 #include "dualList.h"
 using namespace std;
 
+bool dualList::list_in_list(dualList* list_where, dualList* list_what)
+{
+	Node* what_current = list_what->head;
+	for (Node* where_current = list_where->head; where_current != list_where->tail; where_current = where_current->next)
+	{
+		if (where_current->info == list_what->head->info)
+		{
+			Node* start = where_current;
+				while (where_current->info == what_current->info)
+				{
+					if (what_current == list_what->tail)
+						return true;
+					if (where_current == list_where->tail)
+						return false;
+					where_current = where_current->next;
+					what_current = what_current->next;
+				}
+				where_current = start->next;
+				what_current = list_what->head;
+		}
+	}
+	return false;
+}
 
 void dualList::push_back(int add)
 {
@@ -109,7 +132,7 @@ int dualList::at(size_t i)
 			cur = cur->next;
 			i--;
 		}
-		return cur->content;
+		return cur->info;
 	}
 }
 
@@ -139,7 +162,7 @@ void dualList::print_to_console()
 	Node* cur=head;
 	while (cur != NULL)
 	{
-		cout << cur->content << "| ";
+		cout << cur->info << "| ";
 		cur = cur->next;
 	}
 }
@@ -170,7 +193,7 @@ void dualList::set(size_t i, int ins)
 			cur = cur->next;
 			i--;
 		}
-		cur->content = ins; //change content
+		cur->info = ins; //change content
 	}	
 }
 
@@ -181,14 +204,5 @@ bool dualList::isEmpty()
 	return false;
 }
 
-void dualList::push_back(dualList AddToEnd)
-{
-	Node* head_AddToEnd=AddToEnd.head;
-	while (head_AddToEnd != NULL)
-	{
-		this->push_back(head_AddToEnd->content); //push new item to the end with content from transmitted list
-		head_AddToEnd = head_AddToEnd->next;
-	}
-}
 
 
