@@ -162,7 +162,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Documents\Алгоритмы\кхм\lab1_test.cpp" />
+    <ClCompile Include="..\..\..\Documents\Алгоритмы\кхм\dualList_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dualList\dualList.vcxproj">

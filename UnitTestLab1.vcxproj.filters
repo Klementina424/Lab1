@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Documents\Алгоритмы\кхм\lab1_test.cpp">
+    <ClCompile Include="..\..\..\Documents\Алгоритмы\кхм\dualList_test.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
