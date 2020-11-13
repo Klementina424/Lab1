@@ -3,8 +3,8 @@ using namespace std;
 
 bool dualList::list_in_list(dualList*list_what)
 {
-	Node* what_current = list_what->head;
-	for (Node* where_current = list_where->head; where_current != list_where->tail; where_current = where_current->next)
+	Node* what_current = head;
+	for (Node* where_current = head; where_current != tail; where_current = where_current->next)
 	{
 		if (where_current->info == list_what->head->info)
 		{
@@ -13,7 +13,7 @@ bool dualList::list_in_list(dualList*list_what)
 				{
 					if (what_current == list_what->tail)
 						return true;
-					if (where_current == list_where->tail)
+					if (where_current == tail)
 						return false;
 					where_current = where_current->next;
 					what_current = what_current->next;
