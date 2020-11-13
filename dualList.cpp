@@ -1,7 +1,7 @@
 #include "dualList.h"
 using namespace std;
 
-bool dualList::list_in_list(dualList* list_where)
+bool dualList::list_in_list(dualList*)
 {
 	Node* what_current = list_what->head;
 	for (Node* where_current = list_where->head; where_current != list_where->tail; where_current = where_current->next)
