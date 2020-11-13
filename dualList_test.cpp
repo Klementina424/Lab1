@@ -289,7 +289,7 @@ namespace lab1test
 			current_dual_list->push_back(4);
 			another_dual_list->push_back(2);
 			another_dual_list->push_back(4);
-			Assert::AreEqual(current_dual_list->list_in_list(current_dual_list, another_dual_list), false);
+			Assert::AreEqual(current_dual_list->list_in_list(another_dual_list), false);
 		}
 		TEST_METHOD(test_list_in_list2)
 		{
@@ -301,7 +301,7 @@ namespace lab1test
 			current_dual_list->push_back(4);
 			another_dual_list->push_back(1);
 			another_dual_list->push_back(2);
-			Assert::AreEqual(current_dual_list->list_in_list(current_dual_list, another_dual_list), true);
+			Assert::AreEqual(current_dual_list->list_in_list(another_dual_list), true);
 		}
 		
 	};
